@@ -1,5 +1,5 @@
 {
-	"name": "mrparty-server",
+	"name": "node-mysql-sequelize-authentication-crud",
 	"version": "1.0.0",
 	"description": "",
 	"main": "src/server.js",
