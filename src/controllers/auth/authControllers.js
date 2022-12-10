@@ -19,6 +19,7 @@ const registerController = asyncHandler(async (req, res) => {
 
 	// create user
 	let user = {
+		// role: role,
 		lastname: lastname,
 		firstname: firstname,
 		username: username,

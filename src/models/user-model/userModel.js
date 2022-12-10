@@ -13,6 +13,10 @@ const User = sequelize.define('user_account', {
 		primaryKey: true,
 		defaultValue: DataTypes.UUIDV4,
 	},
+	// role: {
+	// 	type: DataTypes.STRING,
+	// 	allowNull: false,
+	// },
 	lastname: {
 		type: DataTypes.STRING,
 	},
