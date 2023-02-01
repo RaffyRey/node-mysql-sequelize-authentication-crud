@@ -48,11 +48,15 @@ const registerController = asyncHandler(async (req, res) => {
 
 // login controllers
 const loginControllers = asyncHandler(async (req, res) => {
-	let { username, password } = req.body;
+	let {
+		//  username, 
+		email,
+		 password 
+		} = req.body;
 
 	// check username
 	const userExist = await User.findOne({
-		where: { username: username },
+		where: { email: email },
 	});
 
 	if (userExist) {
@@ -60,7 +64,7 @@ const loginControllers = asyncHandler(async (req, res) => {
 
 		if (password_valid) {
 			let user = await User.findOne({
-				where: { username: username },
+				where: { email: email },
 			});
 
 			const token = generateToken(user);
